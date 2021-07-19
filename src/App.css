@@ -1,0 +1,25 @@
+.App {
+  text-align: center;
+}
+
+.tabview .tabview-custom i, .tabview-demo .tabview-custom span {
+  vertical-align: middle;
+}
+
+.tabview .tabview-custom span {
+  margin: 0 .5rem;
+}
+
+.tabview .p-button {
+  margin-right: .25rem;
+}
+
+.tabview .p-tabview p {
+  line-height: 1.5;
+  margin: 0;
+}
+
+.messages{
+  color: red;
+  font-size: 16px;
+}
