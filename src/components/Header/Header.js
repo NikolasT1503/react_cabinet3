@@ -19,9 +19,19 @@ class Header extends Component {
                 command:()=>{ history.push("/github") }
             },
             {
-                label: 'Error',
-                icon: 'pi pi-fw pi-github',
-                command:()=>{ history.push("/error") }
+                label: 'Мои проекты на курсе',
+                icon: 'pi pi-fw pi-briefcase',
+                command:()=>{ history.push("/projects") }
+            },
+            {
+                label: 'Материалы',
+                icon: 'pi pi-fw pi-book',
+                command:()=>{ history.push("/materials") }
+            },
+            {
+                label: 'Отзыв о курсе',
+                icon: 'pi pi-fw pi-star-o',
+                command:()=>{ history.push("/otzyv") }
             },
         ];
     }

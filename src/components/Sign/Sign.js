@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Card } from "primereact/card";
 import { TabPanel, TabView } from "primereact/tabview";
 import SignInCont from "./SignInCont";
+import SignUpCont from "./SignUpCont";
 
 class Sign extends Component {
   state = {
@@ -12,11 +13,10 @@ class Sign extends Component {
   };
   render() {
     return (
-      <div>
+        <div className="card">
         <Card
-          className="center-form-card"
           style={{
-            width: "75%",
+            width: "70%",
             marginBottom: "2em",
             marginLeft: "auto",
             marginRight: "auto",
@@ -30,7 +30,7 @@ class Sign extends Component {
               onTabChange={this.handleTabChange}
             >
               <TabPanel header="Вход" leftIcon="pi pi-sign-in"> <SignInCont/> </TabPanel>
-              <TabPanel header="Регистрация" leftIcon="pi pi-user-edit"> Таб 2</TabPanel>
+              <TabPanel header="Регистрация" leftIcon="pi pi-user-edit"> <SignUpCont/> </TabPanel>
             </TabView>
           </div>
         </Card>

@@ -8,16 +8,14 @@ import axios from "axios";
 import * as yup from "yup";
 
 const schema = yup.object().shape({
-  login: yup.string().required().max(50),
+  login: yup.string().required().max(20),
   password: yup.string().required().min(6),
 });
 
 const SignIn = (props) => {
-    /* console.log('SignIn', props); */
+    console.log('SignIn', props);
     const { history, login, password } = props;
-    const { register, handleSubmit, formState: { errors }} = useForm({ 
-        resolver: yupResolver(schema),
-    });
+    const { register, handleSubmit, formState: { errors }} = useForm({ resolver: yupResolver(schema) });
 
     const onLoginChange = (e) => {
         props.updateLogin(e.value);
@@ -39,6 +37,7 @@ const SignIn = (props) => {
     };
 
   return (
+    <div className="card">
     <div className="p-justify-center">
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="p-grid">
@@ -74,12 +73,11 @@ const SignIn = (props) => {
             <p className="messages">{errors["password"]?.message}</p>
           </div>
         </div>
-        <Button
-          type="submit"
-          label="Войти"
-          icon="pi pi-check"
-        />
+        <div className="button-submit">
+          <Button type="submit" label="Войти" icon="pi pi-check" />
+        </div>
       </form>
+    </div>
     </div>
   );
 };
